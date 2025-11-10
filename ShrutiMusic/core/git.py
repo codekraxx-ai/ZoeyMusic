@@ -1,3 +1,8 @@
+import os
+from git import Repo, GitCommandError, InvalidGitRepositoryError
+import config
+from ..logging import LOGGER
+
 def git():
     REPO_LINK = config.UPSTREAM_REPO
     if config.GIT_TOKEN:
@@ -7,7 +12,6 @@ def git():
     else:
         UPSTREAM_REPO = config.UPSTREAM_REPO
 
-    # If DISABLE_UPDATE is set, skip git operations
     if os.getenv("DISABLE_UPDATE", "False") == "True":
         LOGGER(__name__).info("Auto-update disabled via DISABLE_UPDATE variable.")
         return
