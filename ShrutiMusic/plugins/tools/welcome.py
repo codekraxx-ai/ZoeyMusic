@@ -122,28 +122,26 @@ async def greet_group(_, member: ChatMemberUpdated):
             pic, user.first_name, member.chat.title, user.id, user.username
         )
         temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
-            member.chat.id,
-            photo=welcomeimg,
-            caption=f"""
-🌸✨ ──────────────────── ✨🌸
+    member.chat.id,
+    photo=welcomeimg,
+    caption=f"""
+𖹭ㅤㅤּ   ֶָ֢      . ‌ֺ‌  𔓕⃘︩︪   .  ִ۫𖹭ㅤㅤּ   ֶָ֢      .
 
-         🎊 <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴏᴜʀ ғᴀᴍɪʟʏ</b> 🎊
+꒰  𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏  ꒱
 
-🌹 <b>ɴᴀᴍᴇ</b> ➤ {user.mention}
-🌺 <b>ᴜsᴇʀɴᴀᴍᴇ</b> ➤ @{user.username if user.username else "ɴᴏᴛ sᴇᴛ"}
-🆔 <b>ᴜsᴇʀ ɪᴅ</b> ➤ <code>{user.id}</code>
-🏠 <b>ɢʀᴏᴜᴘ</b> ➤ {member.chat.title}
+𓇬 ◌۫  {user.mention}  
+𝆬 𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞 ➤ @{user.username if user.username else "Not Set"}  
+꯭✿ 𝐔𝐬𝐞𝐫 𝐈𝐃 ➤ <code>{user.id}</code>  
+⚝ 𝐆𝐫𝐨𝐮𝐩 ➤ {member.chat.title}
 
-═════════════════════════
+ ⁺.࣪ ִֶָ  ☾ .ㅤㅤㅤㅤ𝅄 ꣑ৎ ࣪ ㅤㅤㅤㅤ𖹭ㅤㅤּ   ֶָ֢   
 
-💕 <b>ᴡᴇ'ʀᴇ sᴏ ʜᴀᴘᴘʏ ᴛᴏ ʜᴀᴠᴇ ʏᴏᴜ ʜᴇʀᴇ!</b> 
-🎵 <b>ᴇɴᴊᴏʏ ᴛʜᴇ ʙᴇsᴛ ᴍᴜsɪᴄ ᴇxᴘᴇʀɪᴇɴᴄᴇ</b> 🎵
+💕 𝐖𝐞'𝐫𝐞 𝐬𝐨 𝐡𝐚𝐩𝐩𝐲 𝐭𝐨 𝐡𝐚𝐯𝐞 𝐲𝐨𝐮 𝐡𝐞𝐫𝐞!  
+🎀 𝐄𝐧𝐣𝐨𝐲 𝐭𝐡𝐞 𝐁𝐞𝐬𝐭 𝐌𝐮𝐬𝐢𝐜 𝐄𝐱𝐩𝐞𝐫𝐢𝐞𝐧𝐜𝐞  
+🫂 𝐅𝐞𝐞𝐥 𝐟𝐫𝐞𝐞 𝐭𝐨 𝐬𝐡𝐚𝐫𝐞 𝐚𝐧𝐝 𝐩𝐨𝐬𝐭  
 
-✨ <b>ғᴇᴇʟ ғʀᴇᴇ ᴛᴏ sʜᴀʀᴇ ᴀɴᴅ ᴇɴᴊᴏʏ!</b> ✨
-
-<blockquote><b>💝 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➤ <a href="https://t.me/{app.username}?start=help">Mᴜsɪᴄ ʙᴏᴛs🎶💖</a></b></blockquote>
-
-🌸✨ ──────────────────── ✨🌸
+⩩ 𓂃★  𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 ➤ <a href="https://t.me/{app.username}?start=help">Music Bots</a>  
+⚝𓇢  ✨🎀
 """,
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton("🎵 ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🎵", url=f"https://t.me/{app.username}?startgroup=True")]
